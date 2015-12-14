@@ -1,28 +1,36 @@
-AppRate
-=======
+# Android Promiser
 
 * AppRate allows your users to rate your application and will optionally prompt for email feedback if they don't like your application.
 
 * AppRate shows a customizable rate dialog according to your chosen settings.
 
-* If enabled, then the user will first be asked if they like the application prior to asking them to rate it. If they respond that they don't like the application they will be prompted to leave email feedback. Both of these dialogs can be customized.
+## Gradle
 
+Add the following dependency to ```build.gradle```:
 
-How to install and use
-----------------------
+```
+dependencies {
+    ...
+    compile 'com.octopepper:apprate:1.0.0'
+}
+```
 
-1. Put the AppRate [jar] in your `libs` folder or add AppRate as a library project.
-
-[jar]: AppRateDownloads
-
-2. Use AppRate as follows in your `MAIN` activity: 
+## Usage
 
 ```java
 new AppRate(this).init();
 ```
 
-Features
---------
+## Features
+
+* You can decide **when to prompt the user**.
+
+```java
+new AppRate(this)
+	.setMinDaysUntilPrompt(7)
+	.setMinLaunchesUntilPrompt(20)
+	.init();
+```
 
 * You can decide **not to prompt the user** if the application **has crashed once**.
 
@@ -37,15 +45,6 @@ new AppRate(this)
 ```java
 new AppRate(this)
 	.setResetOnAppUpgrade(true)
-	.init();
-```
-
-* You can decide **when to prompt the user**.
-
-```java
-new AppRate(this)
-	.setMinDaysUntilPrompt(7)
-	.setMinLaunchesUntilPrompt(20)
 	.init();
 ```
 
@@ -188,7 +187,7 @@ new AppRate(this)
 	.init();
 ```
 
-License
--------
+## Contributors
 
-This content is released under the MIT License.
+[NodensN](https://github.com/NodensN),
+[Bill Donahue](https://github.com/bdonahue)
