@@ -1,4 +1,4 @@
-# Android Promiser
+# App Rate
 
 * AppRate allows your users to rate your application and will optionally prompt for email feedback if they don't like your application.
 
